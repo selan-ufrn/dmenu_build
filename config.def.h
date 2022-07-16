@@ -13,6 +13,8 @@ static int min_width = 500;  /* minimum width when centered */
 static int fuzzy = 1;        /* -F  option; if 0, dmenu doesn't use fuzzy matching     */
 /* -fn option overrides fonts[0]; default X11 font or font set */
 static const char *fonts[] = {
+    "JetBrainsMono Nerd Font:style=Medium:pixelsize=18:antialias=true:autohint=true",
+	"Iosevka Nerd Font Mono:style=Medium:size=13",
 	"Hack:pixelsize=11:antialias=true:autohint=true",
 	"JoyPixels:pixelsize=8:antialias=true:autohint=true"
 };
@@ -20,7 +22,9 @@ static const char *prompt      = NULL;      /* -p  option; prompt to the left of
 static const char *colors[SchemeLast][2] = {
 	/*     fg         bg       */
 	[SchemeNorm] = { "#cccccc", "#282a36" },
-	[SchemeSel] = { "#ffffff", "#74438f" },
+	// [SchemeSel] = { "#ffffff", "#74438f" },
+	// [SchemeSel]  = { "#ffffff", "#005577" },
+	[SchemeSel]  = { "#000000", "#88C0D0" },
 	[SchemeSelHighlight] = { "#d7d7d7", "#000000" },
 	[SchemeNormHighlight] = { "#a5bdf8", "#000000" },
 	[SchemeOut] = { "#000000", "#00ffff" },
@@ -28,7 +32,7 @@ static const char *colors[SchemeLast][2] = {
 };
 /* -l and -g options; controls number of lines and columns in grid if > 0 */
 static unsigned int lines      = 0;
-static unsigned int lineheight = 38;  /* -h option; minimum height of a menu line */
+static unsigned int lineheight = 30;  /* -h option; minimum height of a menu line */
 static unsigned int columns    = 0;
 
 /*
